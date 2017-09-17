@@ -1,0 +1,20 @@
+.section
+  %h1.title
+    AIR Talk Image Gallery
+  .field
+    %label.label Image URL
+    .control.has-icons-left
+      %input.input{:placeholder => "URL", :type => "url"}/
+      %span.icon.is-small.is-left
+        %i.fa.fa-picture-o
+  .field-body
+    .field
+      .control
+        %button.button.is-primary
+          Add Image
+.section
+  .columns
+    - 10.times.each do |i|
+      .column
+        %figure.image
+          %img{:src => "http://bulma.io/images/placeholders/128x128.png"}/

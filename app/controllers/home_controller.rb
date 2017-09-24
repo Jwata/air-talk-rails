@@ -1,5 +1,5 @@
 class HomeController < ApplicationController
   def index
-    render
+    @images = Image.all.reverse
   end
 end

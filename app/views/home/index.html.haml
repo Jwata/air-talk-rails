@@ -1,20 +1,28 @@
 .section
   %h1.title
     AIR Talk Image Gallery
-  .field
-    %label.label Image URL
-    .control.has-icons-left
-      %input.input{:placeholder => "URL", :type => "url"}/
-      %span.icon.is-small.is-left
-        %i.fa.fa-picture-o
-  .field-body
+  =form_for(Image.new, url: images_path) do |f|
     .field
-      .control
-        %button.button.is-primary
-          Add Image
+      %label.label Image URL
+      .control.has-icons-left
+        %input.input{placeholder: 'URL', type: :url, name: :url}/
+        %span.icon.is-small.is-left
+          %i.fa.fa-picture-o
+    .field-body
+      .field
+        .control
+          %button.button.is-primary
+            Add Image
 .section
-  .columns
-    - 10.times.each do |i|
-      .column
-        %figure.image
-          %img{:src => "http://bulma.io/images/placeholders/128x128.png"}/
+  - @images.each_slice(4) do |images|
+    .columns
+      - images.each do |image|
+        .column.is-3
+          .card
+            =link_to(image.url, target: :blank) do
+              .card-image
+                %figure.image.is-4by3
+                  %img{:src => image.url}
+            %footer.card-footer
+              .card-footer-item
+                =link_to 'Delete', image_path(image), method: :delete, class: 'button is-danger'

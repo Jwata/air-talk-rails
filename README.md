@@ -1,24 +1,18 @@
-# README
+# About this repository
+This is a sample rails app for experimenting different PaaS/IaaS services.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Heroku
+Heroku is one of the platforms where you can deploy your rails app easily.
 
-Things you may want to cover:
+### Create app
+```
+heroku login
+heroku key:add
+heroku create air-talk-rails
+```
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### Deploy
+```
+heroku run rake db:migrate
+git push heroku master
+```

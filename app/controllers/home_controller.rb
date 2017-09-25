@@ -1,5 +1,5 @@
 class HomeController < ApplicationController
   def index
-    @images = Image.all.reverse
+    @images = Image.scan
   end
 end

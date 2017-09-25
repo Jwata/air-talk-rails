@@ -25,4 +25,4 @@
                   %img{:src => image.url}
             %footer.card-footer
               .card-footer-item
-                =link_to 'Delete', image_path(image), method: :delete, class: 'button is-danger'
+                =link_to 'Delete', image_path(image.to_h), method: :delete, class: 'button is-danger'

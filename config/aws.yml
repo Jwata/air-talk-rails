@@ -1,0 +1,15 @@
+default: &default
+  access_key_id: <%= Rails.application.secrets.aws_access_key_id %>
+  secret_access_key: <%= Rails.application.secrets.aws_secret_access_key %>
+  region: 'us-west-2'
+
+development:
+  <<: *default
+  endpoint: http://localhost:8000
+
+test:
+  <<: *default
+  endpoint: http://localhost:8000
+
+production:
+  <<: *default

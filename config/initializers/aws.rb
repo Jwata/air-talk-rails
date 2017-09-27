@@ -1,3 +1,1 @@
-if Rails.env.production?
-  Aws.config.update(Rails.application.secrets.aws)
-end
+Aws.config.update(Rails.application.config_for(:aws).symbolize_keys)

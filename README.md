@@ -75,6 +75,9 @@ Check out [heroku branch](https://github.com/Jwata/air-talk-rails/tree/heroku)
 Because of their flexibility, they are complicated to setup infrastructures. but [AWS Elastic Beanstalk](https://aws.amazon.com/elasticbeanstalk/) helps you host web application easily like PaaS.  
 If you host your own relational database on AWS, it's pretty expensive. but they have [free DynamoDB tier](https://aws.amazon.com/jp/dynamodb/pricing/).
 
+### Demo
+[http://production.qxt33phftr.us-west-2.elasticbeanstalk.com/](http://production.qxt33phftr.us-west-2.elasticbeanstalk.com/)
+
 ### Infrastructures and Tools
 * Framework: [Rails 5](https://github.com/rails/rails)
 * Hosting: [AWS Elastic Beanstalk (Single Instance)](http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/using-features-managing-env-types.html)

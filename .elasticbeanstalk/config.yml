@@ -1,7 +1,5 @@
 branch-defaults:
   aws-beanstalk-with-dynamodb:
-    environment: demo
-  aws-eb-test:
     environment: production
   default:
     environment: null

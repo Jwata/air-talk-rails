@@ -1,14 +1,12 @@
 branch-defaults:
   aws-beanstalk-with-dynamodb:
     environment: production
+    group_suffix: null
   default:
     environment: null
     group_suffix: null
-  master:
-    environment: air-talk-rails
-    group_suffix: null
 global:
-  application_name: air-talk-rails
+  application_name: cheap-rails-sample
   branch: null
   default_ec2_keyname: aws-eb
   default_platform: Ruby 2.3 (Puma)

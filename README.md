@@ -96,21 +96,9 @@ Check out [aws-beanstalk-with-dynamodb branch](https://github.com/Jwata/air-talk
 
 ```
 > eb init
-> eb create production
+> eb create production --cfg .elasticbeanstalk/saved_configs/production-sc.cfg.yml
 > eb use production
 > eb setenv RAILS_MASTER_KEY=`cat config/secrets.yml.key`
-```
-
-Change the environment type of beanstalk from `LoadBalanced` to `SingleInstance` to host app without load balancer.
-
-```
-> eb config
-```
-```
-settings:
-  ...
-  aws:elasticbeanstalk:environment:
-    EnvironmentType: SingleInstance
 ```
 
 ### Deploy
